@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/nitrictech/nitric/discussions
+    about: Ask questions or get help in GitHub discussions
+  - name: View the docs
+    url: https://nitric.io/docs
+    about: Read the documentation site for details on usage and features

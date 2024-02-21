@@ -6,16 +6,34 @@
 
 ## About Nitric
 
-[Nitric](https://nitric.io) is a framework for rapid development of cloud-native and serverless applications. Define your apps in terms of the resources they need, then write the code for serverless function based APIs, event subscribers and scheduled jobs.
-
-Apps built with Nitric can be deployed to AWS, Azure or Google Cloud all from the same code base so you can focus on your products, not your cloud provider.
+[Nitric](https://nitric.io) is a multi-language framework for building cloud applications. Nitric applications let you define cloud resources inline and deploy to providers like AWS, Google Cloud and Microsoft Azure without writing custom infrastructure deployment code. Start by focusing on your product using standard nitric deployment providers for your cloud of choice, then customize as needed to maintain control.
 
 Nitric makes it easy to:
 
-- Create smart serverless functions and APIs
-- Build reliable distributed apps that use events and/or queues
-- Securely store, retrieve and rotate secrets
-- Read and write files from buckets
+- Build APIs, Websockets and Schedules in JavaScript, TypeScript, Python, Go and other languages
+- Quickly create distributed apps, using async messaging, via Queues and Topics, between services
+- Reliably deploy common cloud resources like Services, Buckets, Key/Value Stores, Queues, Secrets and Topics directly from application code
+- Build or extend a deployment provider to push deploy cloud resources as you see fit
+- Deploy applications to different cloud services or cloud providers without changing core application code
+
+### Example
+
+Here's what it looks like to build and deploy an API gateway and a service to handle routes with Nitric:
+
+```typescript
+import { api } from "@nitric/sdk";
+
+api("main").get("/hello/:name", async (ctx) => {
+  const { name } = ctx.req.params;
+  ctx.res.body = `Hello ${name}`;
+});
+```
+
+Deploy this API with the `nitric up` command, without writing project specific IaC. 
+
+```bash
+nitric up
+```
 
 ## Get in touch
 

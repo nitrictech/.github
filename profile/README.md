@@ -13,7 +13,7 @@ Nitric makes it easy to:
 - Build APIs, Websockets and Schedules in JavaScript, TypeScript, Python, Go and other languages
 - Quickly create distributed apps, using async messaging, via Queues and Topics, between services
 - Reliably deploy common cloud resources like Services, Buckets, Key/Value Stores, Queues, Secrets and Topics directly from application code
-- Build or extend a deployment provider to push deploy cloud resources as you see fit
+- Build or extend a deployment provider to deploy cloud resources as you see fit
 - Deploy applications to different cloud services or cloud providers without changing core application code
 
 ### Example
